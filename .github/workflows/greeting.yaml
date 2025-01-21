@@ -13,6 +13,6 @@ jobs:
       Greeting: Hello ## Environment variable for the job
     steps:
       - name: "Say Hello Mona it's Monday"
-        run: echo "$Greeting $First_Name and $MY_NAME. Today is $DAY_OF_WEEK!"
+        run: echo "$Greeting $First_Name and ${{ secrets.MY_NAME }}. Today is $DAY_OF_WEEK!"
         env:
           First_Name: Mona ## Environment variable only for the step "Say Hello Mona it's Monday" of the job "greeting_job"
